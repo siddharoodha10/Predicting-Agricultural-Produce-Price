@@ -1,0 +1,91 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device">
+    <style>
+
+            .main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body{
+            background-image: url("{% static 'wheat.jpg'%}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>   
+<body style="text-align:center">
+<div class="main">
+
+<h1>Selected Details</h1>
+
+<form name="form1" id="form1" action="result" method="POST">
+            {%csrf_token%}
+
+           <div class="col-sm-4" style="background-color:Bisque">
+                <label for="varity">Selected crop:</label>
+                {{varity}}
+               </div>
+           <div class="col-sm-4" style="background-color:DarkSeGreen">
+               <label for="state">Selected State:</label>
+
+             {{state}}
+         </div>
+
+<div class="col-sm-4" style="background-color:Khaki">
+              <label for="dist">Selected District:</label>
+
+            {{dist}}
+            </div>
+
+<div class="col-sm-4" style="background-color:Turquoise">
+                <label for="year">Selected year:</label>
+                {{year}}
+                
+            </div>
+
+        <div class="col-sm-4" style="background-color:RosyBrown">
+              <label for="month">Selected Month:</label>
+
+            		{{month}}
+            </div>
+         <div class="col-sm-4" style="background-color:Chartreuse">
+              <label for="month">The Estimated price(Rs./Quintal):</label>
+              <h1>
+
+            		{{result}}
+            		</h1>
+            		     </div>
+        </div>
+</form>
+</div>
+
+</body>
+</html>

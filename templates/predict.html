@@ -1,0 +1,331 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+var subjectObject = {
+  "Rice": {
+    
+'Karnataka':['Mysore', 'Dharwad', 'Chikmagalur', 'Bangalore', 'Gulbarga','Tumkur', 'Raichur', 'Bellary', 'Shimoga', 'Chitradurga', 'Mandya', 'Karwar(Uttar Kannad)', 'Haveri', 'Udupi', 'Belgaum', 'Hassan', 'Mangalore(Dakshin Kannad)', 'Davangere', 'Madikeri(Kodagu)', 'Chamrajnagar', 'Bagalkot', 'Bidar', 'Kolar', 'Gadag', 'Bijapur', 'Koppal', ],
+
+'Delhi':['Delhi'],
+
+'Uttrakhand':['Nanital', 'Haridwar', 'UdhamSinghNagar', 'Dehradoon', 'Garhwal (Pauri)', 'Champawat'],
+
+'Kerala':['Ernakulam', 'Alleppey', 'Alappuzha', 'Kannur', 'Kollam', 'Pathanamthitta', 'Wayanad', 'Malappuram', 'Kottayam', 'Kozhikode(Calicut)', 'Thiruvananthapuram', 'Idukki'],
+
+'Himachal Pradesh':['Hamirpur', 'Mandi'],
+
+'Jammu and Kashmir':['Jammu'],
+
+
+'Goa':['North Goa'],
+
+'Orissa':['Deogarh', 'Koraput', 'Nuapada', 'Ganjam', 'Sundergarh', 'Jharsuguda', 'Gajapati', 'Balasore', 'Cuttack', 'Khurda', 'Bhadrak', 'Bolangir', 'Malkangiri', 'Nowarangpur', 'Angul', 'Boudh', 'Rayagada', 'Bargarh', 'Puri', 'Jagatsinghpur', 'Kandhamal', 'Dhenkanal', 'Mayurbhanja', 'Kalahandi', 'Jajpur', 'Sonepur', 'Keonjhar', 'Sambalpur', 'Nayagarh', 'Kendrapara'],
+
+'Karnataka':['Mysore', 'Tumkur', 'Raichur', 'Bellary', 'Shimoga', 'Chitradurga', 'Mandya', 'Karwar(Uttar Kannad)', 'Haveri', 'Udupi', 'Belgaum', 'Hassan', 'Mangalore(Dakshin Kannad)', 'Davangere', 'Madikeri(Kodagu)', 'Chamrajnagar', 'Bagalkot', 'Bidar', 'Kolar', 'Gadag', 'Bijapur', 'Koppal', 'Dharwad', 'Chikmagalur', 'Bangalore', 'Gulbarga'],
+
+'Jharkhand':['Koderma', 'Deogarh', 'East Singhbhum', 'Bokaro', 'Ranchi', 'Gumla', 'Palamu', 'Garhwa', 'Latehar', 'Lohardaga', 'Dumka', 'Saraikela(Kharsanwa)', 'Hazaribagh', 'Godda', 'Sahebgang', 'Pakur', 'Simdega', 'Giridih', 'Dhanbad', 'West Singbhum', 'Jamtara'],
+
+'Manipur':['Imphal West', 'Chandel', 'Thoubal', 'Bishnupur', 'Imphal East'],
+
+'Chattisgarh':['Raipur', 'Raigarh', 'Surguja', 'Bilaspur', 'Bastar', 'Jashpur'],
+
+'Meghalaya':['East Jaintia Hills', 'West Garo Hills', 'Nongpoh (R-Bhoi)', 'West Jaintia Hills', 'East Khasi Hills'],
+
+'Punjab':['Patiala', 'Tarntaran', 'Muktsar', 'Ludhiana', 'Amritsar', 'Faridkot', 'kapurthala', 'Fazilka', 'Jalandhar', 'Fatehgarh', 'Mohali'],
+
+'Madhya Pradesh':['Ratlam', 'Balaghat', 'Satna', 'Narsinghpur', 'Shajapur', 'Rewa', 'Datia', 'Sehore', 'Vidisha', 'Raisen'],
+
+'Tamil Nadu':['Kancheepuram', 'Vellore', 'Erode', 'Chennai'],
+
+'Nagaland':['Dimapur'],
+
+'Rajasthan':['Ganganagar', 'Hanumangarh', 'Sikar', 'Tonk', 'Chittorgarh', 'Ajmer'],
+
+'Haryana':['Jhajar', 'Sirsa', 'Kaithal', 'Rohtak', 'Kurukshetra', 'Hissar', 'Mewat', 'Fatehabad'],
+
+'Telangana':['Ranga Reddy Dist.', 'Nizamabad', 'Khammam', 'Warangal', 'Nalgonda', 'Karimnagar', 'Adilabad', 'Medak'],
+
+'Assam':['Kamrup', 'Kokrajhar', 'Golaghat', 'Jorhat', 'Darrang', 'Nalbari', 'Sibsagar', 'Karimganj', 'Hailakandi', 'Sonitpur', 'Nagaon', 'Lakhimpur', 'Tinsukia', 'Dhemaji', 'Dhubri', 'Cachar', 'Bangaigaon', 'Goalpara', 'Barpeta', 'Dibrugarh'],
+
+'West Bengal':['Darjeeling', 'North 24 Parganas', 'Bankura', 'Puruliya', 'Medinipur(W)', 'Kolkata', 'Medinipur(E)', 'Uttar Dinajpur', 'Murshidabad', 'Coochbehar', 'Nadia', 'Dakshin Dinajpur', 'Sounth 24 Parganas', 'Jalpaiguri', 'Birbhum', 'Malda', 'Howrah', 'Burdwan', 'Hooghly'],
+
+'Bihar':['Aurangabad', 'Madhepura', 'Araria', 'Chhapra', 'Bhabhua'],
+
+'Gujarat':['Surat', 'Sabarkantha', 'Bharuch', 'Amreli', 'Mehsana', 'Vadodara(Baroda)', 'Ahmedabad', 'Valsad', 'Kheda', 'Anand', 'Narmada', 'Panchmahals', 'Dahod', 'Navsari'],
+
+'Maharashtra':['Bhandara', 'Gondiya', 'Nandurbar', 'Gadchiroli', 'Kolhapur', 'Chandrapur', 'Akola', 'Dhule', 'Nashik', 'Jalgaon', 'Raigad', 'Sangli', 'Mumbai', 'Pune', 'Amarawati', 'Sholapur', 'Vashim', 'Parbhani', 'Thane', 'Latur', 'Satara', 'Osmanabad', 'Nanded', 'Ratnagiri', 'Nagpur', 'Ahmednagar', 'Yavatmal', 'Buldhana'],
+
+'Uttar Pradesh':['Siddharth Nagar', 'Jhansi', 'Pillibhit', 'Faizabad', 'Fatehpur', 'Sultanpur', 'Gautam Budh Nagar', 'Pratapgarh', 'Firozabad', 'Maharajganj', 'Ghazipur', 'Bareilly', 'Auraiya', 'Etawah', 'Unnao', 'Lalitpur', 'Allahabad', 'Shravasti', 'Barabanki', 'Ambedkarnagar', 'Muzaffarnagar', 'Aligarh', 'Baghpat', 'Shahjahanpur', 'Kaushambi', 'Mau(Maunathbhanjan)', 'Etah', 'Badaun', 'Raebarelli', 'Kannuj', 'Balrampur', 'Jyotiba Phule Nagar', 'Mahoba', 'Bulandshahar', 'Basti', 'Hathras', 'Gorakhpur', 'Khiri (Lakhimpur)', 'Lakhimpur', 'Ghaziabad', 'Saharanpur', 'Bijnor', 'Bhadohi(Sant Ravi Nagar)', 'Kanpur', 'Hamirpur', 'Meerut', 'Padrauna(Kusinagar)', 'Sitapur', 'Mainpuri', 'Azamgarh', 'Bahraich', 'Hardoi', 'Chandauli', 'Banda', 'Gonda', 'Muradabad', 'Varanasi', 'Chitrakut', 'Deoria', 'Agra', 'Rampur', 'Ballia', 'Mathura', 'Jalaun (Orai)', 'Farukhabad', 'Jaunpur', 'Mirzapur', 'Sonbhadra', 'Sant Kabir Nagar', 'Lucknow'],
+
+'Tripura':['South District', 'Dhalai', 'West District', 'North Tripura'],
+
+'Arunachal Pradesh':['East Siang'],
+
+'Andhra Pradesh':['Vijayanagaram', 'Nellore', 'West Godavari', 'Guntur', 'Srikakulam', 'Visakhapatnam', 'Prakasam', 'Krishna', 'East Godavari', 'Cuddapah', 'Kurnool'],
+
+
+
+
+  },
+
+
+
+
+  "Wheat": {
+    "Karnataka": ["Mysore", "Gadag", "Gulbarga", "Bangalore",'Bidar', 'Haveri', 'Belgaum', 'Karwar(Uttar Kannad)', 'Shimoga', 'Chamrajnagar', 'Bagalkot', 'Mandya', 'Mangalore(Dakshin Kannad)', 'Davangere', 'Bellary', 'Dharwad', 'Hassan', 'Koppal', 'Bijapur', 'Raichur', 'Kolar', 'Tumkur', 'Chitradurga', 'Madikeri(Kodagu)', 'Chikmagalur', 'Udupi'],
+
+    "Andra Pradesh": ['Visakhapatnam', 'Chittor', 'Srikakulam', 'Vijayanagaram', 'Cuddapah'],
+
+    "Delhi": ["Delhi"],
+
+    'Haryana':['Sonipat', 'Ambala', 'Mahendragarh-Narnaul', 'Karnal', 'Kaithal', 'Mewat', 'Rewari', 'Bhiwani', 'Hissar', 'Faridabad', 'Fatehabad', 'Jind', 'Rohtak', 'Kurukshetra', 'Jhajar', 'Sirsa', 'Gurgaon', 'Panipat', 'Yamuna Nagar', 'Panchkula', 'Palwal'],
+
+'Maharashtra':['Nanded', 'Vashim', 'Wardha', 'Ahmednagar', 'Pune', 'Sangli', 'Mumbai', 'Sholapur', 'Yavatmal', 'Nandurbar', 'Aurangabad', 'Latur', 'Gadchiroli', 'Satara', 'Hingoli', 'Parbhani', 'Akola', 'Chandrapur', 'Amarawati', 'Dhule', 'Osmanabad', 'Jalana', 'Raigad', 'Jalgaon', 'Nagpur', 'Beed', 'Thane', 'Buldhana', 'Nashik', 'Kolhapur', 'Bhandara'],
+
+'Uttar Pradesh':['Ghaziabad', 'Raebarelli', 'Pratapgarh', 'Auraiya', 'Ambedkarnagar', 'Hathras', 'Pillibhit', 'Bahraich', 'Barabanki', 'Basti', 'Etah', 'Gorakhpur', 'Chitrakut', 'Sant Kabir Nagar', 'Mau(Maunathbhanjan)', 'Rampur', 'Bhadohi(Sant Ravi Nagar)', 'Sonbhadra', 'Jaunpur', 'Faizabad', 'Muradabad', 'Gonda', 'Baghpat', 'Allahabad', 'Agra', 'Lakhimpur', 'Lalitpur', 'Hamirpur', 'Shahjahanpur', 'Jyotiba Phule Nagar', 'Sultanpur', 'Chandauli', 'Etawah', 'Deoria', 'Bareilly', 'Mahoba', 'Saharanpur', 'Gautam Budh Nagar', 'Hardoi', 'Jhansi', 'Balrampur', 'Mirzapur', 'Jalaun (Orai)', 'Bulandshahar', 'Maharajganj', 'Farukhabad', 'Fatehpur', 'Khiri (Lakhimpur)', 'Padrauna(Kusinagar)', 'Aligarh', 'Azamgarh', 'Meerut', 'Ghazipur', 'Lucknow', 'Ballia', 'Varanasi', 'Unnao', 'Badaun', 'Banda', 'Sitapur', 'Muzaffarnagar', 'Kannuj', 'Kaushambi', 'Siddharth Nagar', 'Mathura', 'Firozabad', 'Mainpuri', 'Bijnor', 'Shravasti', 'Kanpur'],
+
+'West Bengal':['Medinipur(E)', 'Sounth 24 Parganas', 'Bankura', 'Uttar Dinajpur', 'Nadia', 'Medinipur(W)', 'Burdwan', 'Dakshin Dinajpur', 'Birbhum', 'Malda', 'Murshidabad', 'Howrah', 'Kolkata'],
+
+'Tamil Nadu':['Kancheepuram', 'Thiruvannamalai', 'Ramanathapuram', 'Dindigul', 'Salem'],
+
+'Telangana':['Adilabad', 'Khammam', 'Warangal', 'Ranga Reddy Dist.', 'Nizamabad', 'Medak', 'Mahbubnagar', 'Karimnagar'],
+
+'Bihar':['Madhepura', 'Sheikhpura', 'Chhapra', 'Bhabhua', 'West Chambaran', 'Aurangabad', 'Araria'],
+
+'Madhya Pradesh':['Sehore', 'Ashoknagar', 'Sheopur', 'Umariya', 'Sagar', 'Rewa', 'Khandwa', 'Singroli', 'Indore', 'Vidisha', 'Harda', 'Mandla', 'Shehdol', 'Bhopal', 'Narsinghpur', 'Chhatarpur', 'Badwani', 'Panna', 'Jhabua', 'Alirajpur', 'Jabalpur', 'Khargone', 'Damoh', 'Burhanpur', 'Satna', 'Katni', 'Datia', 'Bhind', 'Betul', 'Shajapur', 'Raisen', 'Anupur', 'Dhar', 'Hoshangabad', 'Morena', 'Chhindwara', 'Ratlam', 'Shivpuri', 'Sidhi', 'Dindori', 'Balaghat', 'Ujjain', 'Seoni', 'Dewas', 'Rajgarh', 'Gwalior', 'Tikamgarh', 'Guna', 'Mandsaur', 'Neemuch'],
+
+'Chattisgarh':['Rajnandgaon', 'Surguja', 'Narayanpur', 'North Bastar', 'Korba', 'Dantewada', 'Jashpur', 'Raigarh', 'Durg', 'Raipur', 'Dhamtari', 'Koria', 'Kanker', 'Bilaspur', 'Mahasamund', 'Kawardha', 'Janjgir', 'Bastar'],
+
+'Goa':['North Goa'],
+
+'Punjab':['Patiala', 'Faridkot', 'Bhatinda', 'Tarntaran', 'Hoshiarpur', 'Ferozpur', 'Mansa', 'Pathankot', 'Muktsar', 'Ropar (Rupnagar)', 'Jalandhar', 'Fazilka', 'Mohali', 'kapurthala', 'Ludhiana', 'Fatehgarh', 'Sangrur', 'Nawanshahr', 'Gurdaspur', 'Moga', 'Amritsar', 'Barnala'],
+
+'Assam':['Goalpara', 'Dhemaji', 'Bangaigaon', 'Nagaon', 'Dhubri', 'Dibrugarh', 'Barpeta', 'Darrang', 'Tinsukia', 'Sonitpur', 'Jorhat', 'Karimganj'],
+
+'Nagaland':['Dimapur'],
+
+
+'Uttrakhand':['Garhwal (Pauri)', 'Nanital', 'Haridwar', 'Dehradoon', 'UdhamSinghNagar', 'Champawat'],
+
+'Gujarat':['Navsari', 'Sabarkantha', 'Surendranagar', 'Narmada', 'Amreli', 'Banaskanth', 'Ahmedabad', 'Jamnagar', 'Rajkot', 'Porbandar', 'Junagarh', 'Bharuch', 'Patan', 'Surat', 'Anand', 'Panchmahals', 'Dahod', 'Morbi', 'Bhavnagar', 'Kheda', 'Vadodara(Baroda)', 'Gandhinagar', 'The Dangs', 'Kachchh', 'Mehsana'],
+
+'Jharkhand':['East Singhbhum', 'Latehar', 'Ranchi', 'Deogarh', 'Hazaribagh', 'West Singbhum', 'Koderma', 'Gumla', 'Bokaro', 'Simdega', 'Giridih', 'Pakur', 'Dumka', 'Sahebgang', 'Godda', 'Lohardaga', 'Saraikela(Kharsanwa)', 'Palamu', 'Dhanbad', 'Jamtara', 'Garhwa'],
+
+'Himachal Pradesh':['Sirmore', 'Bilaspur', 'Mandi', 'Hamirpur'],
+
+'Orissa':['Koraput', 'Kalahandi', 'Jajpur', 'Deogarh', 'Rayagada', 'Gajapati', 'Nowarangpur', 'Sundergarh', 'Bargarh', 'Mayurbhanja', 'Sonepur', 'Ganjam', 'Jharsuguda', 'Angul', 'Keonjhar', 'Khurda', 'Bhadrak'],
+
+'Chandigarh':['Chandigarh'],
+
+'Manipur':['Bishnupur'],
+
+'Kerala':['Alleppey', 'Kannur', 'Thiruvananthapuram', 'Alappuzha', 'Kollam', 'Kozhikode(Calicut)'],
+
+'Rajasthan':['Dausa', 'Tonk', 'Baran', 'Sirohi', 'Karauli', 'Ganganagar', 'Bikaner', 'Jhalawar', 'Bharatpur', 'Bhilwara', 'Dungarpur', 'Pali', 'Chittorgarh', 'Udaipur', 'Swai Madhopur', 'Jhunjunu', 'Dholpur', 'Hanumangarh', 'Jalore', 'Rajasamand', 'Kota', 'Alwar', 'Banswara', 'Barmer', 'Bundi', 'Nagaur', 'Sikar', 'Ajmer', 'Churu', 'Jodhpur', 'Jaipur'],
+
+  
+
+
+  },
+  "Maize": {
+    'Karnataka':['Mysore', 'Tumkur', 'Raichur', 'Bellary', 'Shimoga', 'Chitradurga', 'Mandya', 'Karwar(Uttar Kannad)', 'Haveri', 'Udupi', 'Belgaum', 'Hassan', 'Mangalore(Dakshin Kannad)', 'Davangere', 'Madikeri(Kodagu)', 'Chamrajnagar', 'Bagalkot', 'Bidar', 'Kolar', 'Gadag', 'Bijapur', 'Koppal', 'Dharwad', 'Chikmagalur', 'Bangalore', 'Gulbarga'],
+
+'Uttrakhand':['Nanital', 'Haridwar', 'UdhamSinghNagar', 'Dehradoon', 'Garhwal (Pauri)', 'Champawat'],
+
+'Kerala':['Alappuzha'],
+
+'Himachal Pradesh':['Bilaspur', 'Mandi'],
+
+'Delhi':['Delhi'],
+
+'Jammu and Kashmir':['Anantnag'],
+
+'Orissa':['Mayurbhanja', 'Khurda', 'Deogarh', 'Cuttack', 'Rayagada', 'Dhenkanal', 'Kalahandi', 'Koraput', 'Jajpur', 'Malkangiri', 'Sambalpur', 'Nuapada', 'Kandhamal', 'Nowarangpur', 'Sundergarh', 'Ganjam', 'Angul', 'Gajapati'],
+
+
+
+'Jharkhand':['Koderma', 'Deogarh', 'Lohardaga', 'Garhwa', 'Godda', 'Giridih', 'Dhanbad', 'Latehar', 'Sahebgang', 'Gumla', 'Palamu', 'Hazaribagh', 'Pakur'],
+
+'Manipur':['Thoubal', 'Imphal West', 'Bishnupur', 'Imphal East'],
+
+'Chattisgarh':['Raipur', 'Raigarh', 'Narayanpur', 'Kanker', 'Dantewada', 'North Bastar', 'Dhamtari', 'Koria', 'Surguja', 'Bilaspur', 'Bastar', 'Mahasamund', 'Durg', 'Kawardha', 'Jashpur', 'Korba', 'Rajnandgaon', 'Janjgir'],
+
+'Tamil Nadu':['Namakkal', 'Thiruchirappalli', 'Thirunelveli', 'Villupuram', 'Thiruvannamalai', 'Vellore', 'Tuticorin', 'Ariyalur', 'Salem', 'Dindigul', 'Pudukkottai', 'Madurai', 'Coimbatore', 'Cuddalore', 'Virudhunagar', 'Erode'],
+
+'Madhya Pradesh':['Badwani', 'Mandla', 'Dhar', 'Jhabua', 'Guna', 'Shivpuri', 'Narsinghpur', 'Betul', 'Vidisha', 'Gwalior', 'Panna', 'Khargone', 'Tikamgarh', 'Sheopur', 'Raisen', 'Umariya', 'Hoshangabad', 'Seoni', 'Shajapur', 'Anupur', 'Satna', 'Datia', 'Indore', 'Sagar', 'Katni', 'Sidhi', 'Chhatarpur', 'Alirajpur', 'Damoh', 'Rewa', 'Khandwa', 'Singroli', 'Ujjain', 'Chhindwara', 'Jabalpur', 'Morena', 'Ratlam', 'Ashoknagar', 'Dindori', 'Harda', 'Balaghat', 'Neemuch', 'Mandsaur', 'Sehore', 'Dewas', 'Bhind', 'Shehdol', 'Bhopal', 'Burhanpur', 'Rajgarh'],
+
+'Punjab':['Ludhiana', 'Amritsar', 'Barnala', 'Mohali', 'Sangrur', 'Muktsar', 'Moga', 'Ferozpur', 'Mansa', 'Hoshiarpur', 'Fatehgarh', 'Patiala', 'Bhatinda', 'Tarntaran', 'Faridkot', 'kapurthala', 'Nawanshahr', 'Fazilka', 'Jalandhar'],
+
+'Meghalaya':['West Jaintia Hills', 'West Khasi Hills', 'West Garo Hills'],
+
+'Nagaland':['Mon', 'Zunheboto', 'Wokha', 'Dimapur'],
+
+'Chandigarh':['Chandigarh'],
+
+'Rajasthan':['Sirohi', 'Dausa', 'Ganganagar', 'Hanumangarh', 'Jodhpur', 'Sikar', 'Tonk', 'Bikaner', 'Udaipur', 'Bhilwara', 'Banswara', 'Jhalawar', 'Baran', 'Chittorgarh', 'Jaipur', 'Swai Madhopur', 'Dungarpur', 'Pali', 'Bharatpur', 'Ajmer', 'Alwar', 'Dholpur', 'Kota', 'Nagaur', 'Rajasamand', 'Bundi'],
+
+'Haryana':['Panipat', 'Jhajar', 'Ambala', 'Faridabad', 'Palwal', 'Gurgaon', 'Jind', 'Yamuna Nagar', 'Sirsa', 'Hissar', 'Mahendragarh-Narnaul', 'Kurukshetra', 'Rohtak', 'Panchkula', 'Sonipat', 'Bhiwani', 'Fatehabad'],
+
+'Telangana':['Hyderabad', 'Ranga Reddy Dist.', 'Nizamabad', 'Warangal', 'Khammam', 'Nalgonda', 'Karimnagar', 'Adilabad', 'Mahbubnagar', 'Medak'],
+
+'West Bengal':['Uttar Dinajpur', 'Bankura', 'Malda', 'Darjeeling'],
+
+'Assam':['Goalpara', 'Dhubri', 'Barpeta', 'Kokrajhar', 'Jorhat', 'Karimganj', 'Sonitpur', 'Darrang', 'Bangaigaon', 'Nagaon', 'Tinsukia'],
+
+'Bihar':['Supaul', 'Araria', 'Chhapra', 'Madhepura'],
+
+'Pondicherry':['Pondicherry'],
+
+'Gujarat':['Rajkot', 'Amreli', 'Morbi', 'Gandhinagar', 'Surendranagar', 'Kheda', 'Dahod', 'Bhavnagar', 'Ahmedabad', 'Vadodara(Baroda)', 'Anand', 'Narmada', 'Surat', 'The Dangs', 'Porbandar', 'Mehsana', 'Junagarh', 'Banaskanth', 'Panchmahals', 'Sabarkantha', 'Bharuch', 'Jamnagar'],
+
+'Maharashtra':['Bhandara', 'Nandurbar', 'Gadchiroli', 'Jalana', 'Kolhapur', 'Akola', 'Dhule', 'Nashik', 'Jalgaon', 'Raigad', 'Sangli', 'Mumbai', 'Hingoli', 'Pune', 'Amarawati', 'Sholapur', 'Parbhani', 'Vashim', 'Aurangabad', 'Latur', 'Thane', 'Satara', 'Beed', 'Osmanabad', 'Nanded', 'Wardha', 'Nagpur', 'Ahmednagar', 'Yavatmal', 'Buldhana'],
+
+'Uttar Pradesh':['Siddharth Nagar', 'Jhansi', 'Pratapgarh', 'Faizabad', 'Firozabad', 'Bareilly', 'Auraiya', 'Etawah', 'Unnao', 'Lalitpur', 'Allahabad', 'Muzaffarnagar', 'Aligarh', 'Baghpat', 'Shahjahanpur', 'Etah', 'Badaun', 'Kannuj', 'Balrampur', 'Jyotiba Phule Nagar', 'Bulandshahar', 'Basti', 'Hathras', 'Gorakhpur', 'Khiri (Lakhimpur)', 'Lakhimpur', 'Ghaziabad', 'Saharanpur', 'Bijnor', 'Kanpur', 'Meerut', 'Sitapur', 'Mainpuri', 'Lucknow', 'Hardoi', 'Gonda', 'Bahraich', 'Muradabad', 'Varanasi', 'Agra', 'Rampur', 'Jalaun (Orai)', 'Farukhabad', 'Jaunpur', 'Gautam Budh Nagar'],
+
+'Arunachal Pradesh':['East Siang'],
+
+'Tripura':['South District'],
+
+'Andhra Pradesh':['Nellore', 'West Godavari', 'Guntur', 'Srikakulam', 'Visakhapatnam', 'Prakasam', 'Chittor', 'Krishna', 'Kurnool', 'East Godavari', 'Cuddapah', 'Anantapur', 'Vijayanagaram'],
+  }
+  
+}
+window.onload = function() {
+  var varity = document.getElementById("varity");
+  var stateSel = document.getElementById("state");
+  var DistSel = document.getElementById("dist");
+  for (var x in subjectObject) {
+    varity.options[varity.options.length] = new Option(x, x);
+  }
+  varity.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    DistSel.length = 1;
+    stateSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      stateSel.options[stateSel.options.length] = new Option(y, y);
+    }
+  }
+  stateSel.onchange = function() {
+    //empty Chapters dropdown
+    DistSel.length = 1;
+    //display correct values
+    var z = subjectObject[varity.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      DistSel.options[DistSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
+<meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device">
+    <style>
+
+            .main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body{
+            background-image: url("{% static 'i4.jpg'%}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>   
+<body style="text-align:center">
+<div class="main">
+
+<h1>Please enter the following details</h1>
+
+<form name="form1" id="form1" action="result" method="POST">
+            {%csrf_token%}
+
+           <div class="col-sm-4" style="background-color:Bisque">
+                <label for="varity">Choose the crop:</label>
+
+            <select id="varity" name="varity">
+            <option value="" selected="selected">Select the varity</option>
+            </select>
+            </div>
+
+           <div class="col-sm-4" style="background-color:DarkSeGreen">
+               <label for="state">Choose the State:</label>
+
+             <select id="state" name="state">
+              <option value="" selected="selected">select state </option>
+            </select>
+            </div>
+
+<div class="col-sm-4" style="background-color:Khaki">
+              <label for="dist">Choose The District:</label>
+
+            <select id="dist" name="dist">
+               <option value="" selected="selected">select the district</option>
+            </select>
+            </div>
+
+<div class="col-sm-4" style="background-color:Turquoise">
+                <label for="year">The year:</label>
+
+            <select id="year" name="year">
+                <option value="2022" >2022</option>
+                <option value="2023" >2023</option>
+                <option value="2024" >2024</option>
+                <option value="2025" >2025</option>
+
+            </select>
+                
+            </div>
+
+        <div class="col-sm-4" style="background-color:RosyBrown">
+              <label for="month">Choose The Month:</label>
+
+            <select id="month" name="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            </div>
+            <div class="row">
+        <input  type="submit" value="PREDICT" >
+        </div>
+
+        </div>
+</form>
+</div>
+
+</body>
+</html>

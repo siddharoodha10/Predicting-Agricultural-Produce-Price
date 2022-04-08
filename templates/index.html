@@ -1,0 +1,38 @@
+{%load static%}
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body{
+           background-image:url("{%static 'i2.jpeg'%}");
+           
+            background-color:#000000;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        h2{
+        margin-top:150px;
+        font-size;400px;
+        }
+        h1{
+        font-size:60px;
+        }
+        input[type=submit]{
+        background-color:#000000;
+        color:white;
+        cursor:pointer;
+        pading :16px 32px;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+<h2>Welcome to </h2>
+<h1>Agricultural Produce Price Prediction</h1>
+<form action="predict">
+	 <div class="row">
+        <input  type="submit" value="START" >
+        </div>
+</form>
+</body>
+</html>
