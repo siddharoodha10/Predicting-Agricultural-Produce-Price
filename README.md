@@ -14,12 +14,11 @@ account for missing data entries.
 (iii) Our project proposes a novel wide and deep neural network architecture which
 consists of convolutional neural network models(trained for pricing).
 
-
-Steps to run:
-python manage.py runserver
-
-Instalation:
-
-1)Python
-2)Django
-3)deep learning packages(LSTM).
+Steps to run locally
+1)Clone the repo
+2)cd Predicting-Agricultural-Produce-Price
+3)Instalation:
+	1)Install Python (from python.org)
+	2)run the commend from comend promt pip install -r requirements.txt
+4)run python manage.py runserver
+5)copy server adress from comend promp and paste in browser. Hit eneter button.
