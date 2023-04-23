@@ -24,3 +24,6 @@ Steps to run locally
 5)copy server adress from comend promp and paste in browser. Hit eneter button.
 
 <img width="953" alt="image" src="https://user-images.githubusercontent.com/67213640/233852653-112a23c5-d947-425e-85ad-dd723ca277b3.png">
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/67213640/233853315-ff6597dc-b8e1-4533-bf4e-af4b22799131.png">
+<img width="936" alt="image" src="https://user-images.githubusercontent.com/67213640/233853370-08803838-e92d-4d3b-ab3b-4e911a14d67b.png">
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/67213640/233853408-08ec32a8-1cc4-4ba5-a931-327c75ccccbf.png">
